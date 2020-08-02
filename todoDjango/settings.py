@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'todo.apps.TodoConfig',
+    'django-cors-headers',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -50,6 +52,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# 許可するオリジン
+CORS_ORIGIN_WHITELIST = [
+    'localhost:3000',
+]
+# レスポンスを公開する
+CORS_ALLOW_CREDENTIALS = True
 ROOT_URLCONF = 'todoDjango.urls'
 
 TEMPLATES = [
