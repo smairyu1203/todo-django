@@ -54,7 +54,7 @@ MIDDLEWARE = [
 
 # 許可するオリジン
 CORS_ORIGIN_WHITELIST = [
-    'localhost:3000',
+    'http://localhost:3000',
 ]
 # レスポンスを公開する
 CORS_ALLOW_CREDENTIALS = True
