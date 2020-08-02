@@ -55,6 +55,7 @@ MIDDLEWARE = [
 # 許可するオリジン
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'https://priceless-ramanujan-c2a97f.netlify.app',
 ]
 # レスポンスを公開する
 CORS_ALLOW_CREDENTIALS = True
