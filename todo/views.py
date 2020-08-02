@@ -1,10 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
-from django.views.decorators.csrf import ensure_csrf_cookie
 from .models import Todo
 
-@ensure_csrf_cookie
 # Create your views here.
 # 全返却
 def index(request):
